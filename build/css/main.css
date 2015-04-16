@@ -6875,7 +6875,8 @@ h4 {
   padding-bottom: 50px; }
 
 .partner-item {
-  text-align: center; }
+  text-align: center;
+  line-height: 100px; }
 
 .dm-footer {
   background: #003a99 url(/build/img/header-lines-bg.png);
