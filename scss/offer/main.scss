@@ -1,5 +1,6 @@
 .dm-offer {
   list-style: none;
+  margin-bottom: 40px;
 }
 
 .dm-offer-diagno,
@@ -24,7 +25,6 @@
 }
 
 .dm-offer__title {
-  color: $brand-grey;
   font-family: 'sansation bold', serif;
   font-size: 16px;
   display: block;
@@ -32,7 +32,7 @@
 }
 
 .dm-offer__index {
-  color: $brand-grey;
+  color: #e6e6e6;
   font-family: 'sansation light', serif;
   font-size: 48px;
   display: block;
@@ -40,7 +40,6 @@
 }
 
 .dm-offer__subtitle {
-  color: $brand-grey;
   font-family: 'opensans', serif;
   font-size: 14px;
   line-height: 24px;

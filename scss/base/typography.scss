@@ -1,3 +1,7 @@
+body {
+  font-family: 'opensans', sans-serif;
+}
+
 h1 {
   padding: 140px 0;
   text-align: center;
@@ -5,13 +9,18 @@ h1 {
   font-family: 'sansation light', sans-serif;
 }
 
-h2 {
-
-}
-
 h3 {
   font-size: 11px;
   letter-spacing: 1px;
   color: #000;
   font-family: 'sansation bold', sans-serif;
+}
+
+h4 {
+  font-size: 14px;
+  padding: 40px 0 50px;
+  text-align: center;
+  color: #000;
+  font-family: 'sansation bold', sans-serif;
+  text-transform: uppercase;
 }
