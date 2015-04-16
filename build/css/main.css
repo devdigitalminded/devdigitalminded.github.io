@@ -6669,9 +6669,9 @@ h3 {
   padding: 0 3px 0 15px;
   float: left;
   text-indent: -9999px;
-  width: 85px;
+  width: 200px;
   height: 60px;
-  background: url(/build/img/logoheader.png) 15px 50% no-repeat; }
+  background: url(/build/img/logo.png) 15px 50% no-repeat; }
 
 .navbar-toggle {
   margin-top: 13px;
@@ -6762,7 +6762,7 @@ h3 {
   font-family: 'opensans italic', sans-serif; }
 
 .dm-about__face {
-  width: 95px;
+  width: 120px;
   height: 95px;
   padding: 0;
   background: transparent url(/build/img/team/fabrice-tranier.png) no-repeat 0 0; }
