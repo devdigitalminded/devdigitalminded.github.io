@@ -1,0 +1,38 @@
+/* Specific navigation styles */
+.navbar {
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  -webkit-transform: translateZ(0);
+}
+
+.nav-logo {
+  margin: 0;
+  padding: 0 3px 0 15px;
+  float: left;
+  text-indent: -9999px;
+  width: 85px;
+  height: 60px;
+  background: url(/build/img/logoheader.png) 15px 50% no-repeat;
+}
+
+.navbar-toggle {
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+.navbar-nav {
+  text-transform: uppercase;
+
+  > li {
+    font-family: $headings-font-family;
+  }
+  .navbar-inverse & > li > a {
+    font-size: 18px;
+    padding: 20px;
+  }
+  .navbar-inverse & > li > .navbar-twitter {
+    padding: 15px;
+  }
+}

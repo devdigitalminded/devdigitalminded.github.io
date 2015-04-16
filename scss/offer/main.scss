@@ -1,0 +1,50 @@
+.dm-offer {
+  list-style: none;
+}
+
+.dm-offer-diagno,
+.dm-offer-strat,
+.dm-offer-transfo,
+.dm-offer-mentor {
+  background: transparent no-repeat 50% 0;
+  padding-top: 140px;
+}
+
+.dm-offer-diagno {
+  background-image: url(/build/img/brain1.png);
+}
+.dm-offer-strat {
+  background-image: url(/build/img/brain2.png);
+}
+.dm-offer-transfo {
+  background-image: url(/build/img/brain3.png);
+}
+.dm-offer-mentor {
+  background-image: url(/build/img/brain4.png);
+}
+
+.dm-offer__title {
+  color: $brand-grey;
+  font-family: 'sansation bold', serif;
+  font-size: 16px;
+  display: block;
+  text-align: center;
+}
+
+.dm-offer__index {
+  color: $brand-grey;
+  font-family: 'sansation light', serif;
+  font-size: 48px;
+  display: block;
+  text-align: center;
+}
+
+.dm-offer__subtitle {
+  color: $brand-grey;
+  font-family: 'opensans', serif;
+  font-size: 14px;
+  line-height: 24px;
+  display: block;
+  text-align: center;
+}
+

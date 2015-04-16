@@ -1,0 +1,20 @@
+{
+  "name": "digital-minded",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Blaaast/blaaast.github.io",
+  "authors": [
+    "Tom Coquereau <tom@thau.me>"
+  ],
+  "description": "The website of digital minded",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-without-jquery": "~0.6.1"
+  }
+}

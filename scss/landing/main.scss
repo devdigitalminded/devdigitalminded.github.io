@@ -1,0 +1,17 @@
+.dm-landing {
+  background: $primary-color url(/build/img/header-lines-bg.png);
+  padding: 150px 0;
+}
+
+.dm-brain {
+  text-align: right;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.dm-tagline {
+  min-height: 326px;
+  background: transparent url(/build/img/baseline.png) no-repeat 0 50%;
+}
