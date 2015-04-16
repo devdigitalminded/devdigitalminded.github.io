@@ -1,3 +1,20 @@
+.dm-offers {
+  h1 {
+    position: relative;
+
+    &::after {
+      position: absolute;
+        bottom: 120px;
+        left: 50%;
+      content: ' ';
+      margin-left: -35px;
+      width: 70px;
+      height: 4px;
+      background: #e6e6e6;
+    }
+  }
+}
+
 .dm-offer {
   list-style: none;
   margin-bottom: 40px;

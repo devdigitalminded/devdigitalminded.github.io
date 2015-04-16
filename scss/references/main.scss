@@ -1,6 +1,21 @@
 .dm-references {
   background-color: #e6e6e6;
   padding-bottom: 100px;
+
+  h1 {
+    position: relative;
+
+    &::after {
+      position: absolute;
+        bottom: 120px;
+        left: 50%;
+      content: ' ';
+      margin-left: -35px;
+      width: 70px;
+      height: 4px;
+      background: darken(#e6e6e6, 10%);
+    }
+  }
 }
 
 .reference-item {

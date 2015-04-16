@@ -6712,6 +6712,18 @@ h4 {
   min-height: 326px;
   background: transparent url(/build/img/baseline.png) no-repeat 0 50%; }
 
+.dm-offers h1 {
+  position: relative; }
+  .dm-offers h1::after {
+    position: absolute;
+    bottom: 120px;
+    left: 50%;
+    content: ' ';
+    margin-left: -35px;
+    width: 70px;
+    height: 4px;
+    background: #e6e6e6; }
+
 .dm-offer {
   list-style: none;
   margin-bottom: 40px; }
@@ -6787,6 +6799,17 @@ h4 {
 .dm-references {
   background-color: #e6e6e6;
   padding-bottom: 100px; }
+  .dm-references h1 {
+    position: relative; }
+    .dm-references h1::after {
+      position: absolute;
+      bottom: 120px;
+      left: 50%;
+      content: ' ';
+      margin-left: -35px;
+      width: 70px;
+      height: 4px;
+      background: #cdcdcd; }
 
 .reference-item {
   position: relative;
