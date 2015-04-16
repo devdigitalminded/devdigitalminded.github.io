@@ -6650,6 +6650,12 @@ h1 {
   color: #000;
   font-family: 'sansation light', sans-serif; }
 
+h3 {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #000;
+  font-family: 'sansation bold', sans-serif; }
+
 /* Specific navigation styles */
 .navbar {
   position: absolute;
@@ -6734,3 +6740,32 @@ h1 {
   line-height: 24px;
   display: block;
   text-align: center; }
+
+.dm-offer-detail {
+  padding: 80px 0;
+  background: #003a99 url(/build/img/offre-lines-bg.png) no-repeat 100% 50%;
+  min-height: 300px; }
+
+.offer-aside {
+  color: #fff;
+  font-family: 'opensans', sans-serif;
+  list-style: none;
+  padding-left: 80px;
+  font-size: 16px;
+  line-height: 30px; }
+
+.offer-aside__title {
+  font-family: 'opensans bold', sans-serif; }
+
+.offer-deliverable {
+  margin-top: 40px;
+  font-family: 'opensans italic', sans-serif; }
+
+.dm-about__face {
+  width: 95px;
+  height: 95px;
+  padding: 0;
+  background: transparent url(/build/img/team/fabrice-tranier.png) no-repeat 0 0; }
+
+.dm-about__body {
+  padding-top: 100px; }

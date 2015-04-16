@@ -48,3 +48,26 @@
   text-align: center;
 }
 
+
+.dm-offer-detail {
+  padding: 80px 0;
+  background: $primary-color url(/build/img/offre-lines-bg.png) no-repeat 100% 50%;
+  min-height: 300px;
+}
+
+.offer-aside {
+  color: #fff;
+  font-family: 'opensans', sans-serif;
+  list-style: none;
+  padding-left: 80px;
+  font-size: 16px;
+  line-height: 30px;
+}
+.offer-aside__title {
+  font-family: 'opensans bold', sans-serif;
+}
+
+.offer-deliverable {
+  margin-top: 40px;
+  font-family: 'opensans italic', sans-serif;
+}
