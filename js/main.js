@@ -2,49 +2,63 @@
 // - classList
 
 (function (w) {
-  var body = document.getElementsByTagName('body')[0];
-  var modalButton = document.getElementById('modal-copyright-btn');
-  var modal = document.getElementById('modal-copyright');
-  var modalDialog = document.querySelector('.modal-dialog');
-  var modalBackdrop = modal.querySelector('.modal-backdrop');
-  var modalClose = modal.querySelectorAll('.js-modal-legal-close');
 
-  function toggleLegalModal (e) {
-    e && e.preventDefault();
+  var navLinks = document.getElementsByClassName('navbar-link');
+  console.log('navlinks: ', navLinks);
 
-    if (modal.classList.contains('in')) {
-      // Remove 'modal-open' to restore body's scroll
-      body.classList.remove('modal-open');
-      // Manage the modal hiding
-      modal.classList.remove('in');
-      modalBackdrop.remove('in');
-
-      setTimeout(function (argument) {
-        modal.style.display = 'none';
-        modalBackdrop.style.display = 'none';
-      }, 500);
-
-    } else {
-      // Add class to kill the body's scroll
-      body.classList.add('modal-open');
-      // Manage the modal showing
-      modal.style.display = 'block';
-      modalBackdrop.style.display = 'block';
-      modalBackdrop.style.height = parseFloat(modalDialog.offsetHeight + 60) + 'px';
-      modal.classList.add('in');
-      modalBackdrop.classList.add('in');
-    }
+  function currentYPosition() {
+    // Firefox, Chrome, Opera, Safari
+    if (self.pageYOffset) return self.pageYOffset;
+    // Internet Explorer 6 - standards mode
+    if (document.documentElement && document.documentElement.scrollTop)
+      return document.documentElement.scrollTop;
+    // Internet Explorer 6, 7 and 8
+    if (document.body.scrollTop) return document.body.scrollTop;
+    return 0;
   }
 
-  // Toggle modal from footer button
-  modalButton.addEventListener('click', toggleLegalModal, false);
+  function elmYPosition(eID) {
+    console.log('eID: ', eID);
+    var elm = document.getElementById(eID);
+    var y = elm.offsetTop;
+    var node = elm;
+    while (node.offsetParent && node.offsetParent != document.body) {
+      node = node.offsetParent;
+      y += node.offsetTop;
+    } return y;
+  }
 
-  // Toggle the modal on click on the backdrop
-  modalBackdrop.addEventListener('click', toggleLegalModal, false);
+  function smoothScroll(eID) {
+    var startY = currentYPosition();
+    var stopY = elmYPosition(eID);
+    var distance = stopY > startY ? stopY - startY : startY - stopY;
+    if (distance < 100) {
+      scrollTo(0, stopY); return;
+    }
+    var speed = Math.round(distance / 100);
+    if (speed >= 20) speed = 20;
+    var step = Math.round(distance / 25);
+    var leapY = stopY > startY ? startY + step : startY - step;
+    var timer = 0;
+    if (stopY > startY) {
+      for ( var i=startY; i<stopY; i+=step ) {
+        setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+        leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+      } return;
+    }
+    for ( var i=startY; i>stopY; i-=step ) {
+      setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+      leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+    }
+    return false;
+  }
 
-  // Toggle modal from modal's close buttons
-  [].forEach.call(modalClose, function (el) {
-    el.addEventListener('click', toggleLegalModal, false);
+  // Attach the event on the link of the navbar
+  [].forEach.call(navLinks, function (el) {
+    el.addEventListener('click', function (ev) {
+      ev.preventDefault();
+      smoothScroll(ev.target.href.split('#')[1]);
+    }, false);
   });
 
 })(window);
