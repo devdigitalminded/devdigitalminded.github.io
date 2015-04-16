@@ -6761,6 +6761,9 @@ h3 {
   margin-top: 40px;
   font-family: 'opensans italic', sans-serif; }
 
+.dm-about {
+  padding: 140px 0; }
+
 .dm-about__face {
   width: 120px;
   height: 95px;
