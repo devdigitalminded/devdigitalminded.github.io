@@ -101,7 +101,7 @@
     el.classList.add('in');
   }
 
-  diagnoEl[0].addEventListener('click', function (ev) {
+  diagnoEl[0].addEventListener('mouseenter', function (ev) {
     ev.preventDefault();
 
     switchDetail(diagnoDetailEl[0]);
@@ -109,7 +109,7 @@
     switchArrow(this);
   }, false);
 
-  stratEl[0].addEventListener('click', function (ev) {
+  stratEl[0].addEventListener('mouseenter', function (ev) {
     ev.preventDefault();
 
     switchDetail(stratDetailEl[0]);
@@ -117,7 +117,7 @@
     switchArrow(this);
   }, false);
 
-  transfoEl[0].addEventListener('click', function (ev) {
+  transfoEl[0].addEventListener('mouseenter', function (ev) {
     ev.preventDefault();
 
     switchDetail(transfoDetailEl[0]);
@@ -125,7 +125,7 @@
     switchArrow(this);
   }, false);
 
-  mentorEl[0].addEventListener('click', function (ev) {
+  mentorEl[0].addEventListener('mouseenter', function (ev) {
     ev.preventDefault();
 
     switchDetail(mentorDetailEl[0]);
