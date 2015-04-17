@@ -6699,7 +6699,7 @@ h4 {
   float: left;
   text-indent: -9999px;
   width: 200px;
-  height: 60px;
+  height: 80px;
   background: url(/build/img/logo.png) 15px 50% no-repeat; }
 
 .navbar-toggle {
@@ -6713,7 +6713,7 @@ h4 {
   .navbar-inverse .navbar-nav > li > a {
     font-size: 14px;
     color: #fff;
-    padding: 20px;
+    padding: 30px 20px;
     font-family: 'sansation bold', sans-serif; }
   .navbar-inverse .navbar-nav > li > .navbar-twitter {
     padding: 15px; }
