@@ -1410,7 +1410,7 @@ pre {
       width: 970px; } }
   @media (min-width: 980px) {
     .container {
-      width: 940px; } }
+      width: 970px; } }
 
 .container-fluid {
   margin-right: auto;
@@ -6720,7 +6720,7 @@ h4 {
 
 .dm-landing {
   background: #003a99 url(/build/img/header-lines-bg.png);
-  padding: 150px 0; }
+  padding: 180px 0 140px; }
 
 .dm-brain {
   text-align: right; }
@@ -6798,9 +6798,9 @@ h4 {
     display: block; }
 
 .dm-offer-scaler {
-  -webkit-transition: all .6s ease-in-out;
-  -o-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   -webkit-transform: scale(.9);
   -ms-transform: scale(.9);
   transform: scale(.9); }
@@ -6913,9 +6913,9 @@ h4 {
 .partner-item {
   text-align: center;
   line-height: 100px;
-  -webkit-transition: all .6s ease-in-out;
-  -o-transition: all .6s ease-in-out;
-  transition: all .6s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
   -webkit-transform: scale(.9);
   -ms-transform: scale(.9);
   transform: scale(.9); }
@@ -6925,9 +6925,39 @@ h4 {
     transform: scale(1); }
 
 .dm-footer {
-  background: #003a99 url(/build/img/header-lines-bg.png);
-  padding: 150px 0; }
+  background: #003a99 url(/build/img/map-digital.png) no-repeat 100% 50%;
+  padding: 100px 0; }
+  .dm-footer .form-control {
+    background-color: #003a99;
+    border-color: #003a99;
+    color: #fff; }
+    .dm-footer .form-control::-webkit-input-placeholder {
+      /* WebKit browsers */
+      color: #fff; }
+    .dm-footer .form-control:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #fff;
+      opacity: 1; }
+    .dm-footer .form-control::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #fff;
+      opacity: 1; }
+    .dm-footer .form-control:-ms-input-placeholder {
+      /* Internet Explorer 10+ */
+      color: #fff; }
+  .dm-footer a {
+    color: #fff; }
+  .dm-footer h3 {
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase; }
+    .dm-footer h3::after {
+      background: #fff; }
   .dm-footer .container {
-    text-align: center;
+    text-align: left;
     color: #fff;
     font-size: 16px; }
+
+.form-btn {
+  text-transform: uppercase;
+  color: #003a99; }

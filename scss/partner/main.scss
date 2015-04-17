@@ -5,7 +5,7 @@
 .partner-item {
   text-align: center;
   line-height: 100px;
-  @include transition(all .6s ease-in-out);
+  @include transition(all .3s ease-in-out);
   -webkit-transform: scale(.9);
       -ms-transform: scale(.9);
           transform: scale(.9);
