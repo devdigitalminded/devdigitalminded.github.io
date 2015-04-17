@@ -10,5 +10,28 @@
 }
 
 .dm-about__body {
+  max-width: 650px;
   padding-top: 100px;
+}
+
+.dm-about__social {
+  padding-top: 20px;
+  font-family: 'opensans italic', sans-serif;
+  float: right;
+  text-align: right;
+}
+
+.dm-about__twitter {
+  color: $twitter-blue;
+  &:hover {
+    color: $twitter-blue;
+  }
+}
+
+.dm-about__medium {
+  color: darken($brand-grey, 40%);
+
+  &:hover {
+    color: darken($brand-grey, 40%);
+  }
 }

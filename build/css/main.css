@@ -6849,7 +6849,24 @@ h4 {
   background: transparent url(/build/img/team/fabrice-tranier.png) no-repeat 0 0; }
 
 .dm-about__body {
+  max-width: 650px;
   padding-top: 100px; }
+
+.dm-about__social {
+  padding-top: 20px;
+  font-family: 'opensans italic', sans-serif;
+  float: right;
+  text-align: right; }
+
+.dm-about__twitter {
+  color: #00ccf1; }
+  .dm-about__twitter:hover {
+    color: #00ccf1; }
+
+.dm-about__medium {
+  color: gray; }
+  .dm-about__medium:hover {
+    color: gray; }
 
 .dm-references {
   background-color: #f2f2f2;
