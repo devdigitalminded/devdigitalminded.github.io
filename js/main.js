@@ -133,4 +133,61 @@
     switchArrow(this);
   }, false);
 
+
+  /**
+   * Send form
+   *
+   */
+
+  function getUrlVars() {
+    var vars = [];
+    var hash;
+    var hashes = window.location.href
+      .slice(window.location.href.indexOf('?') + 1)
+      .split('&');
+    for (var i = 0; i < hashes.length; i++) {
+      hash = hashes[i].split('=');
+      vars[hash[0]] = hash[1];
+    }
+    return vars;
+  }
+
+  var query = getUrlVars('form');
+  if (query.form === 'sent') {
+    // Show a success message
+    var form = document.getElementById('contact-form');
+    var successForm = document.getElementById('contact-form-success');
+
+    form.classList.add('hidden');
+    successForm.classList.remove('hidden');
+
+    document.getElementById('contact').scrollIntoView();
+  }
+
+  // var form = document.getElementById('contact-form');
+  // form.addEventListener('submit', function (ev) {
+  //   ev.preventDefault();
+
+  //   var request = new XMLHttpRequest();
+  //   request.open('POST', this.action, true);
+  //   request.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');
+  //   request.setRequestHeader('Accept', 'application/json');
+
+  //   request.onload = function() {
+  //     if (request.status === 200) {
+  //       var userInfo = JSON.parse(request.responseText);
+  //     } else {
+  //       console.log('Error: ', request.responseText);
+  //     }
+  //   };
+
+  //   request.send(JSON.stringify({
+  //     name: document.getElementById('form-name').value,
+  //     _subject: 'You have a new mail',
+  //     _next: '',
+  //     _replyto: document.getElementById('form-email').value,
+  //     message: document.getElementById('form-message').value
+  //   }));
+  // }, false);
+
 })(window);
