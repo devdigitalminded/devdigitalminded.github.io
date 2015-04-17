@@ -3,8 +3,12 @@
 
 (function (w) {
 
+  /**
+   * Smooth scrolling
+   *
+   */
+
   var navLinks = document.getElementsByClassName('navbar-link');
-  console.log('navlinks: ', navLinks);
 
   function currentYPosition() {
     // Firefox, Chrome, Opera, Safari
@@ -60,5 +64,72 @@
       smoothScroll(ev.target.href.split('#')[1]);
     }, false);
   });
+
+  /**
+   * Offers slider
+   *
+   */
+  // Offers
+  var diagnoEl = document.getElementsByClassName('dm-offer-diagno');
+  var stratEl = document.getElementsByClassName('dm-offer-strat');
+  var transfoEl = document.getElementsByClassName('dm-offer-transfo');
+  var mentorEl = document.getElementsByClassName('dm-offer-mentor');
+
+  // Details
+  var diagnoDetailEl = document.getElementsByClassName('offer-detail-diagno');
+  var stratDetailEl = document.getElementsByClassName('offer-detail-strat');
+  var transfoDetailEl = document.getElementsByClassName('offer-detail-transfo');
+  var mentorDetailEl = document.getElementsByClassName('offer-detail-mentor');
+
+  function switchArrow(el) {
+    // Hide the current container...
+    var currentArrowPosition = document.querySelector('.js-offer-btn.in');
+    if (currentArrowPosition !== null) {
+      currentArrowPosition.classList.remove('in');
+    }
+    el.classList.add('in');
+  }
+
+  function switchDetail(el) {
+    // Hide the current container...
+    var currentContainer = document.querySelector('.container.in');
+    if (currentContainer !== null) {
+      currentContainer.classList.remove('in');
+    }
+    // ... and show the diagnostic one
+    el.classList.add('in');
+  }
+
+  diagnoEl[0].addEventListener('click', function (ev) {
+    ev.preventDefault();
+
+    switchDetail(diagnoDetailEl[0]);
+
+    switchArrow(this);
+  }, false);
+
+  stratEl[0].addEventListener('click', function (ev) {
+    ev.preventDefault();
+
+    switchDetail(stratDetailEl[0]);
+
+    switchArrow(this);
+  }, false);
+
+  transfoEl[0].addEventListener('click', function (ev) {
+    ev.preventDefault();
+
+    switchDetail(transfoDetailEl[0]);
+
+    switchArrow(this);
+  }, false);
+
+  mentorEl[0].addEventListener('click', function (ev) {
+    ev.preventDefault();
+
+    switchDetail(mentorDetailEl[0]);
+
+    switchArrow(this);
+  }, false);
 
 })(window);

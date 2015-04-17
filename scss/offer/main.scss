@@ -17,7 +17,7 @@
 
 .dm-offer {
   list-style: none;
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 
 .dm-offer-diagno,
@@ -26,6 +26,21 @@
 .dm-offer-mentor {
   background: transparent no-repeat 50% 0;
   padding-top: 140px;
+  cursor: pointer;
+}
+.dm-offer-diagno:hover,
+.dm-offer-strat:hover,
+.dm-offer-transfo:hover,
+.dm-offer-mentor:hover,
+.dm-offer-diagno:active,
+.dm-offer-strat:active,
+.dm-offer-transfo:active,
+.dm-offer-mentor:active,
+.dm-offer-diagno:focus,
+.dm-offer-strat:focus,
+.dm-offer-transfo:focus,
+.dm-offer-mentor:focus {
+  /* We'll need that I'm sure */
 }
 
 .dm-offer-diagno {
@@ -66,9 +81,36 @@
 
 
 .dm-offer-detail {
+  position: relative;
   padding: 80px 0;
   background: $primary-color url(/build/img/offre-lines-bg.png) no-repeat 100% 50%;
   min-height: 300px;
+
+  .container {
+    display: none;
+  }
+  .container.in {
+    display: block;
+  }
+}
+
+.js-offer-btn {
+  padding-bottom: 40px;
+}
+.js-offer-btn.in {
+  &::after {
+    position: absolute;
+      bottom: 0;
+      left: 50%;
+    // Calculate the postion based on the center of the div
+    margin-left: -60px;
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 25px solid $primary-color;
+  }
 }
 
 .offer-aside {
