@@ -69,6 +69,7 @@
    * Offers slider
    *
    */
+
   // Offers
   var diagnoEl = document.getElementsByClassName('dm-offer-diagno');
   var stratEl = document.getElementsByClassName('dm-offer-strat');
