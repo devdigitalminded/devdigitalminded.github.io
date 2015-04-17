@@ -30,8 +30,8 @@ gulp.task('connect', function() {
 // SCSS tasks
 gulp.task('css', function() {
   return gulp.src('./scss/main.scss')
-    .pipe( plumber() )
     .pipe( sass() )
+    .pipe( plumber() )
     .pipe( gulp.dest('./build/css') )
     .pipe( connect.reload() )
     // .pipe( notify('CSS task complete!') )
@@ -39,7 +39,6 @@ gulp.task('css', function() {
 
 gulp.task('uncss', function() {
   return gulp.src('./build/css/*.css')
-    .pipe( plumber() )
     .pipe( uncss({
       html: ['./build/*.html'],
       // To make Bootstrap work
@@ -64,13 +63,14 @@ gulp.task('uncss', function() {
         '.alert-dismissible'
       ]
     }) )
+    .pipe( plumber() )
     .pipe( gulp.dest('./build/css') )
 });
 
 gulp.task('minify-css', function() {
   return gulp.src('./build/css/*.css')
-    .pipe( plumber() )
     .pipe( minifyCSS() )
+    .pipe( plumber() )
     .pipe( gulp.dest('./build/css') )
 });
 
@@ -79,13 +79,11 @@ gulp.task('img', ['img-default', 'img-clients-95', 'img-clients']);
 // Responsive images
 gulp.task('img-default', function() {
   return gulp.src('img/**')
-    .pipe( plumber() )
     .pipe( gulp.dest('build/img') );
 });
 
 gulp.task('img-clients-95', function() {
   return gulp.src('img/clients/**')
-    .pipe( plumber() )
     .pipe( changed('build/img/clients') )
     .pipe( imageResize({ width : 95 }) )
     .pipe( rename(function (path) { path.basename += '-95'; }) )
@@ -94,7 +92,6 @@ gulp.task('img-clients-95', function() {
 
 gulp.task('img-clients', function() {
   return gulp.src('img/clients/**')
-    .pipe( plumber() )
     .pipe( changed('build/img/clients') )
     .pipe( imageResize({ width : 224 }) )
     .pipe( gulp.dest('build/img/clients') );
@@ -102,12 +99,12 @@ gulp.task('img-clients', function() {
 
 // JS tasks
 gulp.task('js', function() {
-  return gulp.src('./js/**/*.js')
-    .pipe( plumber() )
+  return gulp.src('./js/main.js')
     .pipe( addsrc('./bower_components/bootstrap-without-jquery/bootstrap3/bootstrap-without-jquery.min.js') )
     .pipe( concat('all.js') )
     // .pipe( jshint() )
     .pipe( jshint.reporter('default') )
+    .pipe( plumber() )
     .pipe( gulp.dest('./build/js/') )
     .pipe( connect.reload() )
     // .pipe( notify('JS task complete!') )
@@ -115,10 +112,10 @@ gulp.task('js', function() {
 
 gulp.task('uglify', function() {
   return gulp.src('./js/*.js')
-    .pipe( plumber() )
     .pipe( uglify() )
     .pipe( addsrc('./js/vendor/*.js') )
     .pipe( concat('all.js') )
+    .pipe( plumber() )
     .pipe( gulp.dest('./build/js') )
 });
 
