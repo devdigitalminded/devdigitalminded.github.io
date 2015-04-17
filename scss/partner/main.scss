@@ -5,4 +5,14 @@
 .partner-item {
   text-align: center;
   line-height: 100px;
+  @include transition(all .6s ease-in-out);
+  -webkit-transform: scale(.9);
+      -ms-transform: scale(.9);
+          transform: scale(.9);
+
+  &:hover {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
+  }
 }

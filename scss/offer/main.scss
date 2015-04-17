@@ -20,10 +20,10 @@
   margin-bottom: 0;
 }
 
-.dm-offer-diagno,
-.dm-offer-strat,
-.dm-offer-transfo,
-.dm-offer-mentor {
+.dm-offer-diagno-bg,
+.dm-offer-strat-bg,
+.dm-offer-transfo-bg,
+.dm-offer-mentor-bg {
   background: transparent no-repeat 50% 0;
   padding-top: 140px;
   cursor: pointer;
@@ -43,16 +43,16 @@
   /* We'll need that I'm sure */
 }
 
-.dm-offer-diagno {
+.dm-offer-diagno-bg {
   background-image: url(/build/img/brain1.png);
 }
-.dm-offer-strat {
+.dm-offer-strat-bg {
   background-image: url(/build/img/brain2.png);
 }
-.dm-offer-transfo {
+.dm-offer-transfo-bg {
   background-image: url(/build/img/brain3.png);
 }
-.dm-offer-mentor {
+.dm-offer-mentor-bg {
   background-image: url(/build/img/brain4.png);
 }
 
@@ -91,6 +91,18 @@
   }
   .container.in {
     display: block;
+  }
+}
+
+.dm-offer-scaler {
+  @include transition(all .6s ease-in-out);
+  -webkit-transform: scale(.9);
+      -ms-transform: scale(.9);
+          transform: scale(.9);
+  &:hover {
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1);
   }
 }
 

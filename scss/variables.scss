@@ -1,6 +1,9 @@
 //fairviewregular
 $headings-font-family: "fairviewregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+$screen-lg:                 980px;
+$container-large-desktop:   (940px + $grid-gutter-width);
+
 // Bootstrap variables
 $primary-color:       #003a99;
 $brand-grey:          #e6e6e6  ;
