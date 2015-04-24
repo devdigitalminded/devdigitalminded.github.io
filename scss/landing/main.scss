@@ -1,6 +1,6 @@
 .dm-landing {
   background: $primary-color url(/build/img/header-lines-bg.png);
-  padding: 180px 0 140px;
+  padding: 100px 0 140px;
 }
 
 .dm-brain {
@@ -12,6 +12,25 @@
 }
 
 .dm-tagline {
-  min-height: 326px;
+  min-height: 170px;
   background: transparent url(/build/img/baseline.png) no-repeat 0 50%;
+  background-size: 100%;
+}
+
+@media (min-width: $screen-md-min) {
+  .dm-landing {
+    padding: 180px 0 140px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .dm-tagline {
+    min-height: 326px;
+  }
+}
+
+@media (min-width: $screen-sm-min) {
+  .dm-tagline {
+    min-height: 230px;
+  }
 }
