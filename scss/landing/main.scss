@@ -1,10 +1,10 @@
 .dm-landing {
   background: $primary-color url(/build/img/header-lines-bg.png);
-  padding: 100px 0 140px;
+  padding: 100px 0 100px;
 }
 
 .dm-brain {
-  text-align: right;
+  text-align: center;
 
   img {
     max-width: 100%;
@@ -12,25 +12,29 @@
 }
 
 .dm-tagline {
+  max-width: 510px;
   min-height: 170px;
-  background: transparent url(/build/img/baseline.png) no-repeat 0 50%;
-  background-size: 100%;
+  margin: 0 auto;
+  background: transparent url(/build/img/baseline.png) no-repeat 50% 50%;
+  background-size: 100% auto;
+}
+
+@media (min-width: $screen-sm-min) {
+  .dm-tagline {
+    min-height: 230px;
+    background-size: 100%;
+  }
 }
 
 @media (min-width: $screen-md-min) {
   .dm-landing {
     padding: 180px 0 140px;
   }
-}
-
-@media (min-width: $screen-md-min) {
+  .dm-brain {
+    text-align: right;
+  }
   .dm-tagline {
     min-height: 326px;
   }
 }
 
-@media (min-width: $screen-sm-min) {
-  .dm-tagline {
-    min-height: 230px;
-  }
-}
