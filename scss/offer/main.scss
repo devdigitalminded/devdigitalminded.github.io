@@ -79,8 +79,8 @@
   text-align: center;
 }
 
-
 .dm-offer-detail {
+  display: none;
   position: relative;
   padding: 80px 0;
   background: $primary-color url(/build/img/offre-lines-bg.png) no-repeat 100% 50%;
@@ -94,36 +94,10 @@
   }
 }
 
-.dm-offer-scaler {
-  @include transition(all .3s ease-in-out);
-  -webkit-transform: scale(.9);
-      -ms-transform: scale(.9);
-          transform: scale(.9);
-  &:hover {
-    -webkit-transform: scale(1);
-        -ms-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
 .js-offer-btn {
   padding-bottom: 40px;
 }
-.js-offer-btn.in {
-  &::after {
-    position: absolute;
-      bottom: 0;
-      left: 50%;
-    // Calculate the postion based on the center of the div
-    margin-left: -60px;
-    content: ' ';
-    width: 0;
-    height: 0;
-    border-left: 60px solid transparent;
-    border-right: 60px solid transparent;
-    border-bottom: 25px solid $primary-color;
-  }
-}
+
 
 .offer-aside {
   color: #fff;
@@ -140,4 +114,38 @@
 .offer-deliverable {
   margin-top: 40px;
   font-family: 'opensans italic', sans-serif;
+}
+
+@media (min-width: 450px) {
+  .dm-offer-detail {
+    display: block;
+  }
+
+  .dm-offer-scaler {
+    @include transition(all .3s ease-in-out);
+    -webkit-transform: scale(.9);
+        -ms-transform: scale(.9);
+            transform: scale(.9);
+    &:hover {
+      -webkit-transform: scale(1);
+          -ms-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+
+  .js-offer-btn.in {
+    &::after {
+      position: absolute;
+        bottom: 0;
+        left: 50%;
+      // Calculate the postion based on the center of the div
+      margin-left: -60px;
+      content: ' ';
+      width: 0;
+      height: 0;
+      border-left: 60px solid transparent;
+      border-right: 60px solid transparent;
+      border-bottom: 25px solid $primary-color;
+    }
+  }
 }

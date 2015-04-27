@@ -20,7 +20,9 @@
 
 .reference-item {
   position: relative;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
+
+  max-width: 243px;
 
   &:hover {
     cursor: pointer;

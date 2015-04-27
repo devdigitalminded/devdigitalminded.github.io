@@ -6804,6 +6804,7 @@ h4 {
   text-align: center; }
 
 .dm-offer-detail {
+  display: none;
   position: relative;
   padding: 80px 0;
   background: #003a99 url(/build/img/offre-lines-bg.png) no-repeat 100% 50%;
@@ -6813,32 +6814,8 @@ h4 {
   .dm-offer-detail .container.in {
     display: block; }
 
-.dm-offer-scaler {
-  -webkit-transition: all .3s ease-in-out;
-  -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  -webkit-transform: scale(.9);
-  -ms-transform: scale(.9);
-  transform: scale(.9); }
-  .dm-offer-scaler:hover {
-    -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1); }
-
 .js-offer-btn {
   padding-bottom: 40px; }
-
-.js-offer-btn.in::after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  margin-left: -60px;
-  content: ' ';
-  width: 0;
-  height: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 25px solid #003a99; }
 
 .offer-aside {
   color: #fff;
@@ -6854,6 +6831,32 @@ h4 {
 .offer-deliverable {
   margin-top: 40px;
   font-family: 'opensans italic', sans-serif; }
+
+@media (min-width: 450px) {
+  .dm-offer-detail {
+    display: block; }
+  .dm-offer-scaler {
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+    -webkit-transform: scale(.9);
+    -ms-transform: scale(.9);
+    transform: scale(.9); }
+    .dm-offer-scaler:hover {
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1); }
+  .js-offer-btn.in::after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -60px;
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 25px solid #003a99; } }
 
 .dm-about {
   padding: 140px 0; }
@@ -6901,7 +6904,8 @@ h4 {
 
 .reference-item {
   position: relative;
-  margin-bottom: 20px; }
+  margin: 0 auto 20px;
+  max-width: 243px; }
   .reference-item:hover {
     cursor: pointer; }
 
