@@ -40,7 +40,7 @@ gulp.task('css', function() {
 gulp.task('uncss', function() {
   return gulp.src('./build/css/*.css')
     .pipe( uncss({
-      html: ['./build/*.html'],
+      html: ['./*.html'],
       // To make Bootstrap work
       ignore: [
         /(#|\.)fancybox(\-[a-zA-Z]+)?/,

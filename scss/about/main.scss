@@ -12,6 +12,10 @@
 .dm-about__body {
   max-width: 650px;
   padding-top: 100px;
+
+  p {
+    line-height: 25px;
+  }
 }
 
 .dm-about__social {
