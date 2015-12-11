@@ -1,3 +1,20 @@
+.dm-partners {
+  h1 {
+    position: relative;
+
+    &::after {
+      position: absolute;
+        bottom: 120px;
+        left: 50%;
+      content: ' ';
+      margin-left: -35px;
+      width: 70px;
+      height: 4px;
+      background: darken(#e6e6e6, 10%);
+    }
+  }
+}
+
 .dm-partner {
   padding-bottom: 50px;
 }
